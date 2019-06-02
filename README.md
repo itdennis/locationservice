@@ -1,10 +1,12 @@
-[![wercker status](https://app.wercker.com/status/6e2e4539d366f796b4df865883bae4da/m/master "wercker status")](https://app.wercker.com/project/byKey/6e2e4539d366f796b4df865883bae4da)
+
+[![wercker status](https://app.wercker.com/status/1775588c38ae3696bb1c2a3e66bb2065/s/master "wercker status")](https://app.wercker.com/project/byKey/1775588c38ae3696bb1c2a3e66bb2065)
 
 # Location Service
-Service to keep a historical record of team member locations. 
 
-This branch of the project requires two environment variables to function properly:
+用于保留团队成员历史位置的微服务。
 
-* TRANSIENT (boolean)
-* POSTGRES_CSTR (postgres connection string)
+在运行此分支的代码之前，需要正确设置这两个环境变量：
+
+* TRANSIENT (boolean 类型)
+* POSTGRES_CSTR (postgres 连接字符串)
 
