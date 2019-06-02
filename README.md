@@ -1,7 +1,8 @@
-[![wercker status](https://app.wercker.com/status/6e2e4539d366f796b4df865883bae4da/m/master "wercker status")](https://app.wercker.com/project/byKey/6e2e4539d366f796b4df865883bae4da)
+[![wercker status](https://app.wercker.com/status/1775588c38ae3696bb1c2a3e66bb2065/s/no-database "wercker status")](https://app.wercker.com/project/byKey/1775588c38ae3696bb1c2a3e66bb2065)
 
 # Location Service
-Service to keep a historical record of team member locations
 
-The `no-database` branch contains only the in-memory repository. The `master` branch contains the PostgreSQL integration.
+用于保留团队成员历史位置的微服务
+
+`no-database` 分支只使用内存仓储，而 `master` 分支则包含一个集成 PostgreSQL 数据库的实现。
 
