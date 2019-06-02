@@ -19,19 +19,23 @@ namespace StatlerWaldorfCorp.LocationService {
 
         public Startup(IHostingEnvironment env, ILoggerFactory loggerFactory)
         {
-            var builder = new ConfigurationBuilder()
-                .SetBasePath(System.IO.Directory.GetCurrentDirectory())
-                .AddJsonFile("appsettings.json", optional:true)
-                .AddEnvironmentVariables()
-                .AddCommandLine(Startup.Args);                
-
-            Configuration = builder.Build();
+            Configuration = InitializeConfiguration();
 
             this.loggerFactory = loggerFactory;
             this.loggerFactory.AddConsole(LogLevel.Information);
             this.loggerFactory.AddDebug();
 
             this.logger = this.loggerFactory.CreateLogger("Startup");
+        }
+
+        internal static IConfigurationRoot InitializeConfiguration() 
+        {
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(System.IO.Directory.GetCurrentDirectory())
+                .AddJsonFile("appsettings.json", optional:true)
+                .AddEnvironmentVariables()
+                .AddCommandLine(Startup.Args);     
+            return builder.Build();   
         }
 
         public static IConfigurationRoot Configuration { get; set; }

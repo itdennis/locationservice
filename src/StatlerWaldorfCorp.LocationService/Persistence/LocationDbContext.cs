@@ -25,6 +25,10 @@ namespace StatlerWaldorfCorp.LocationService.Persistence
     {
         public LocationDbContext CreateDbContext(string[] args)
         {
+            if(Startup.Configuration == null){
+                Startup.Configuration = Startup.InitializeConfiguration();
+            }
+
             var optionsBuilder = new DbContextOptionsBuilder<LocationDbContext>();
             var connectionString = Startup.Configuration.GetSection("postgres:cstr").Value;
             optionsBuilder.UseNpgsql(connectionString);
