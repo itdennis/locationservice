@@ -4,3 +4,6 @@ project.lock.json
 bin
 obj
 .vscode/
+/src/StatlerWaldorfCorp.LocationService/.vs/StatlerWaldorfCorp.LocationService
+/.vs/locationservice/v16
+/.vs
